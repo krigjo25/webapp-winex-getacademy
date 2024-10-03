@@ -1,4 +1,7 @@
 let modal = {
+        app: {
+            page:'index'
+        },
         people: {
             maks:1,
             everyone:false,
@@ -11,7 +14,7 @@ let modal = {
         },
         draw:[
             {
-                time:null,
+                time: null,
                 winners: ['Jane Doe'],
                 participants: ['Jhon Doe', 'Jane Doe', 'Jake Doe', 'Lilly Doe'],
             },

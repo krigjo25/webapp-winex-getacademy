@@ -1,62 +1,34 @@
+
 mainview();
-function mainview() {
-    viewPeople();
 
-    //  Toogle menu
-    //document.querySelector('.page').classList.toggle('.menu');
+function navigationMenu() {
 
-    document.getElementById('winex').innerHTML = /*HTML*/ `
+    document.querySelector('#winex').innerHTML = /*HTML*/ `
     <div class="header" id="header">
-                <button onclick="">☰</button> 
-                <span>Wine</span><span>ix🍷</span>
-            </div>
-            <div id="main" class="main" ></div>
+            <button onclick="">☰</button> 
+            <span>Wine</span><span>ix🍷</span>
             <div id="menu" class="menu">
-                <button class="btn fixed" onclick="viewPeople()">People</button><br />
-                <button class="btn fixed" onclick="viewWinners()">Winners</button><br />
-                <button class="btn fixed" onclick="">About</button><br/>
-                <button class="btn fixed" onclick="">Quit</button><br/>
+                <button class="btn fixed" onclick="viewPeople()">People</button>
+                <button class="btn fixed" onclick="viewWinners()">Winners</button>
+                <button class="btn fixed" onclick="">About</button>
+                <button class="btn fixed" onclick="">Quit</button>
             </div>
-    `;
+        </div>
+`;
+}
+function mainview() {
+
+    document.querySelector('#winex').innerHTML = /*HTML*/`
+        <div id="header" class="header">
+            ${navigationMenu()}
+        </div>
+        <div id='main'>{viewPeople}</div>`;
 }
 
-function viewWinners()
-{
-    //  Initializing variables
-    let html = '';
-    let cls = 'first';
-
-    //  Iteration over model
-    for (let draw of modal.draw)
-    {
-        //  Initializing constant variables
-        const time = new Date(draw.time);
-        const wdn = dateToString(time);
-        const wd = dayName[time.getDay()];
-        const winners = draw.winners;
-        const participants = trekning.participants;
-        const word = winners.length == 1 ? 'vinneren': 'Vinnere';
-        
-        // Generating the html code
-        html += `
-            <p>
-                <small>
-                    <time timedata='${wd}'>${wdn}</time>
-                </small>
-                <b> class='${cls}'> ${word} is ${generatelist(winners)}!</b>
-                <small> Draw of total ${participants.length} People : ${generatelist(participants)}</small>
-            </p>`
-            delete cls;
-    }
-
-    //  Shows the winners
-    document.querySelector('#main').innerHTML = html;
-}
 
 function viewPeople()
 {
-
-    document.querySelector('#main').innerHTML = /*HTML*/`
+    return /*HTML*/`
                 <table>
                     <tr>
                         <td>
@@ -103,4 +75,36 @@ function viewPeople()
                         </td>
                     </tr>
                 </table>`;
+}
+function viewWinners()
+{
+    //  Initializing variables
+    let html = '';
+    let cls = 'first';
+
+    //  Iteration over model
+    for (let draw of modal.draw)
+    {
+        //  Initializing constant variables
+        const time = new Date(draw.time);
+        const wdn = dateToString(time);
+        const wd = dayName[time.getDay()];
+        const winners = draw.winners;
+        const participants = trekning.participants;
+        const word = winners.length == 1 ? 'vinneren': 'Vinnere';
+        
+        // Generating the html code
+        html += `
+            <p>
+                <small>
+                    <time timedata='${wd}'>${wdn}</time>
+                </small>
+                <b> class='${cls}'> ${word} is ${generatelist(winners)}!</b>
+                <small> Draw of total ${participants.length} People : ${generatelist(participants)}</small>
+            </p>`
+            delete cls;
+    }
+
+    //  Shows the winners
+    document.querySelector('#main').innerHTML = html;
 }
