@@ -1,10 +1,24 @@
+
+mainview();
 function mainview() {
     viewPeople();
 
     //  Toogle menu
     document.querySelector('.page').classList.toggle('.menu');
 
-    //document.getElementById('winex').innerHTML =
+    document.getElementById('winex').innerHTML = /*HTML*/ `
+    <div class="header" id="header">
+                <button onclick="main()//toggle">☰</button> 
+                <span>Wine</span><span>ix🍷</span>
+            </div>
+            <div class="main" id="main"></div>
+            <div class="menu" id="menu">
+                <button class="btn fixed" onclick="viewPeople()">People</button><br />
+                <button class="btn fixed" onclick="viewWinners()">Winners</button><br />
+                <button class="btn fixed" onclick="">About</button><br/>
+                <button class="btn fixed" onclick="">Quit</button><br/>
+            </div>
+    `;
 }
 
 function viewWinners()
