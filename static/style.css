@@ -1,53 +1,50 @@
 body {
-    background-color: white;
-}
-h1 {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(0,0,53, 1);
+  background-color: white;
 }
 
-span  {
-    font-weight: bolder;
-    color: rgba(137, 24, 38);
+h1 {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 53);
+}
+
+span {
+  font-weight: bolder;
+  color: rgb(137, 24, 38);
 }
 
 button {
-    color:rgba(250, 250, 250, 1);
-    background-color: rgba(137, 24, 38, 1);
+  background-color: rgb(137, 24, 38);
 }
-
 button.fixed {
-    margin: 2px 4px;
-    inline-size: 70px;
+  margin: 2px 4px;
+  inline-size: 70px;
 }
-
 
 div.menu {
-    grid-template-columns: 0 2fr;
+  grid-template-columns: 0 2fr;
 }
 
 div.grid-container {
-    display: grid;
-    block-size: 100vh;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr 4fr;
-    grid-template-areas: 'menu header', 'menu main';
+  display: grid;
+  block-size: 100vh;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr 4fr;
+  grid-template-areas: "menu header", "menu main";
 }
 
 div.nav {
-    float: inherit;
-    block-size: 100%;
-    padding-inline-end: 4px;
+  float: inherit;
+  block-size: 100%;
+  padding-inline-end: 4px;
 }
 
-div.grid-item{
-    padding: 0px 4px;
-    block-size: 200px;
-    inline-size: 170px;
-    float: inline-start;
-    color: rgba(0, 0, 0, 1);
-    margin-inline-start: 1em;
-    background-color: inherit;
-    border: 1px solid rgba(0, 0, 53, 1);
-}
-
+div.grid-item {
+  padding: 0px 4px;
+  block-size: 200px;
+  inline-size: 170px;
+  float: inline-start;
+  color: rgb(0, 0, 0);
+  margin-inline-start: 1em;
+  background-color: inherit;
+  border: 1px solid rgb(0, 0, 53);
+}/*# sourceMappingURL=style.css.map */
