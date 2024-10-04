@@ -34,10 +34,10 @@ function tableView()
                     <input type="checkbox"/>
                 </th>
                 <th>✎</th>
-                <th><button onclick ='InsertView()'>+</button></th>
+                <th><button onclick ='modal.app.page = 'insert_data'>+</button></th>
                 
             </tr>`;
-    for (person of modal.people.array       )
+    for (person of modal.data.employees)
     {    
         html += /*HTML*/ `
             <tr>
