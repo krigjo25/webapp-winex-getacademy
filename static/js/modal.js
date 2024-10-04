@@ -3,13 +3,13 @@ let modal = {
             page:'index'
         },
         people: {
-            maks:1,
+            max:1,
             everyone:false,
             array:[
-                {id:100, name:'Jhon Doe', bolean:true},
-                {id:101, name:'Jane Doe', bolean:true},
-                {id:102, name:'Jake Doe', bolean:false},
-                {id:103, name:'Lilly Doe', bolean:true}
+                {id:100, name:'Jhon Doe', checked:false},
+                {id:101, name:'Jane Doe', checked:false},
+                {id:102, name:'Jake Doe', checked:false},
+                {id:103, name:'Lilly Doe', checked:false}
                 ],
         },
         draw:[

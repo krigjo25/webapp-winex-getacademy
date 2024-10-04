@@ -33,7 +33,8 @@ function indexView() {
 
 function viewPeople()
 {
-    html = /*HTML*/`<tr>
+    //  Initializing a html tag
+    let html = /*HTML*/`<tr>
                 <th>Name</th>
                 <th>
                     <input type="checkbox"/>
