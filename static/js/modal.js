@@ -15,13 +15,13 @@ let modal = {
         draw:[
             {
                 time: null,
-                winners: ['Jane Doe'],
-                participants: ['Jhon Doe', 'Jane Doe', 'Jake Doe', 'Lilly Doe'],
+                winners: [],
+                participants: [],
             },
             {
                 time:'2024-08-02 16:55',
-                winners: ['Jane Doe', 'Jane Doe', 'Jake Doe', 'Lilly Doe'],
-                participants: ['Jhon Doe', 'Jane Doe', 'Jake Doe', 'Lilly Doe', 'Jonny McDonald', 'Donald Duck'],
+                winners: [],
+                participants: [],
             }
         ]
 };
