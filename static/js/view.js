@@ -1,4 +1,3 @@
-
 indexView();
 
 function navigationMenu() {
@@ -16,7 +15,6 @@ function navigationMenu() {
         </div>`;
 }
 
-
 function indexView() {
 
     document.querySelector('#winex').innerHTML = /*HTML*/`
@@ -29,7 +27,6 @@ function indexView() {
             </table>
         </div>`;
 }
-
 
 function viewPeople()
 {
@@ -50,8 +47,8 @@ function viewPeople()
                 <td>${person.name}</td>
                 <td><input type="checkbox"></td>
 
-                <td><button>✎</button></td>
-                <td><button>☒</button></td>
+                <td><button onclick='modifyUser(${person.id})'>✎</button></td>
+                <td><button onclick='Kick(${person.id})'>☒</button></td>
             </tr>
     `;
     }
@@ -64,8 +61,10 @@ function viewPeople()
                     <button>▼</button>
                 </td>
             </tr>`;
+
     return html
 }
+
 function viewWinners()
 {
     //  Initializing variables
