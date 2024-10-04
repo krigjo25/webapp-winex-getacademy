@@ -5,14 +5,14 @@ function navigationMenu() {
 
    return /*HTML*/ `
     <div class="header" id="header">
-            <button onclick="">☰</button> 
-            <span>Wine</span><span>ix🍷</span>
             <div id="menu" class="menu">
                 <button class="btn fixed" onclick="viewPeople()">People</button>
                 <button class="btn fixed" onclick="viewWinners()">Winners</button>
                 <button class="btn fixed" onclick="">About</button>
                 <button class="btn fixed" onclick="">Quit</button>
             </div>
+            <button onclick="">☰</button> 
+            <span>Wine</span><span>ix🍷</span>
         </div>`;
 }
 
@@ -43,7 +43,7 @@ function viewPeople()
                 <th><button>+</button></th>
                 
             </tr>`;
-    for (person of modal.people.array)
+    for (person of modal.people.array       )
     {    
         html += /*HTML*/ `
             <tr>
