@@ -6,7 +6,7 @@ En gjeng kolleger på Nilsens verksted vil dra i gang litt sosial stemning på j
 
 Legg til følgende funksjonalitet:
 
-- En liste over de ansatte en kan velge å ha med eller ikke ha med i trekningen
+- En liste over de ansatte en kan velge å ha med eller ikke ha med i trekningen [:hevy_check_mark:]
 - Mulighet for å legge til eller slette ansatte fra listen
 - Mulighet for å velge hvor mange vinnere som skal trekkes
 - En meny der man kan toggle mellom mennesker og utførte trekninger

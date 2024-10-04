@@ -1,9 +1,9 @@
 
-mainview();
+indexView();
 
 function navigationMenu() {
 
-    document.querySelector('#winex').innerHTML = /*HTML*/ `
+   return /*HTML*/ `
     <div class="header" id="header">
             <button onclick="">☰</button> 
             <span>Wine</span><span>ix🍷</span>
@@ -13,68 +13,57 @@ function navigationMenu() {
                 <button class="btn fixed" onclick="">About</button>
                 <button class="btn fixed" onclick="">Quit</button>
             </div>
-        </div>
-`;
+        </div>`;
 }
-function mainview() {
+
+
+function indexView() {
 
     document.querySelector('#winex').innerHTML = /*HTML*/`
         <div id="header" class="header">
             ${navigationMenu()}
         </div>
-        <div id='main'>{viewPeople}</div>`;
+        <div id='main'>
+            <table>
+                ${viewPeople()}
+            </table>
+        </div>`;
 }
 
 
 function viewPeople()
 {
-    return /*HTML*/`
-                <table>
-                    <tr>
-                        <td>
-                            <input type="checkbox"/>
-                        </td>
-                        <td>People</td>
-                        <td>+</td>
-                        <td>✎</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" checked/>
-                        </td>
-                        <td>Per</td>
-                        <td onclick="visPersonerMinusPer()">☒</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" checked/>
-                        </td>
-                        <td>Pål</td>
-                        <td>☒</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox"/>
-                        </td>
-                        <td>Espen</td>
-                        <td>☒</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="checkbox" checked/>
-                        </td>
-                        <td>Ole</td>
-                        <td>☒</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <button onclick="showWinners()">Draw!</button>
-                            <input type="text" size="1" value="1"/>
-                            <button>▲</button>
-                            <button>▼</button>
-                        </td>
-                    </tr>
-                </table>`;
+    html = /*HTML*/`<tr>
+                <th>Name</th>
+                <th>
+                    <input type="checkbox"/>
+                </th>
+                <th>✎</th>
+                <th><button>+</button></th>
+                
+            </tr>`;
+    for (person of modal.people.array)
+    {    
+        html += /*HTML*/ `
+            <tr>
+                <td>${person.name}</td>
+                <td><input type="checkbox"></td>
+
+                <td><button>✎</button></td>
+                <td><button>☒</button></td>
+            </tr>
+    `;
+    }
+
+    html += `<tr>
+                <td colspan="4">
+                    <button onclick="showWinners()">Draw!</button>
+                    <input type="text" size="1" value="1"/>
+                    <button>▲</button>
+                    <button>▼</button>
+                </td>
+            </tr>`;
+    return html
 }
 function viewWinners()
 {
@@ -104,7 +93,6 @@ function viewWinners()
             </p>`
             delete cls;
     }
-
+    return html
     //  Shows the winners
-    document.querySelector('#main').innerHTML = html;
 }

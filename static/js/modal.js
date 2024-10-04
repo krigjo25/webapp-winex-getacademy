@@ -5,7 +5,7 @@ let modal = {
         people: {
             maks:1,
             everyone:false,
-            array: [
+            array:[
                 {id:100, name:'Jhon Doe', bolean:true},
                 {id:101, name:'Jane Doe', bolean:true},
                 {id:102, name:'Jake Doe', bolean:false},
