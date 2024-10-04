@@ -1,27 +1,35 @@
 let modal = {
-        app: {
+        app: { //  current page
             page:'index'
         },
-        people: {
-            max:1,
-            everyone:false,
-            array:[
-                {id:100, name:'Jhon Doe', checked:false},
-                {id:101, name:'Jane Doe', checked:false},
-                {id:102, name:'Jake Doe', checked:false},
-                {id:103, name:'Lilly Doe', checked:false}
-                ],
-        },
-        draw:[
-            {
-                time: null,
-                winners: [],
-                participants: [],
+
+        inputs : { //   Inputs from fields
+            push: { // person to push
+                id:null,
+                name:""
             },
-            {
-                time:'2024-08-02 16:55',
-                winners: [],
-                participants: [],
+            modify: {
+                id: null,
+                name: null,
+            },
+            confirm: {
+                id:null,
+                confirmation:false
             }
-        ]
+
+        },
+
+        data: { //  Collected data 
+            max:1,
+            employees:[
+                {id:100, name:'Jhon Doe', checked:false},
+                {id:101, name:'Jane Doe', checked:false}],
+            },
+            draw: [
+                {
+                    time: null,
+                    winners: [],
+                    participants: [],
+                },
+            ]
 };
